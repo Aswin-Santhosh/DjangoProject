@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table align="center" border="1">
+            <tr>
+                <td>District :</td>
+                <td><select name="ddldistrict" id="ddldistrict">
+                    <option value="">---SELECT---</option>
+                    <option value="Ernakulam">Eranakulam</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Place :</td>
+                <td><input type="text" id="txtplace" name="txtplace"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="btnsubmit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <br><center><a href="{% url 'wadmin:homePage' %}">Home</a></center>
+</body>
+</html>

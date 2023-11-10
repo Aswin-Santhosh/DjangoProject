@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user Registrations</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table align="center" border="1">
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" id="txtname" name="txtname"></td>
+            </tr>
+            <tr>
+                <td>Address :</td>
+                <td><textarea name="txtaddress" id="txtaddress" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>Contact :</td>
+                <td><input type="text" id="txtplace" name="txtplace"></td>
+            </tr>
+            <tr>
+                <td>Email ID :</td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Gender </td>
+                <td><input type="radio" id="radiogender" name="radiogender" value="Male">
+                    <input type="radio" id="radiogender" name="radiogender" value="Female"></td>
+            </tr>
+            <tr>
+                <td>District :</td>
+                <td><select name="ddldistrict" id="ddldistrict">
+                    <option value="">---SELECT---</option>
+                    <option value="Ernakulam">Eranakulam</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Place :</td>
+                <td><input type="text" id="txtplace" name="txtplace"></td>
+            </tr>
+            <tr>
+                <td>Proof :</td>
+                <td><input type="file" id="filephoto" name="filephoto"></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="btnsubmit" value="REGISTER"></td>
+            </tr>
+        </table>
+    </form>
+    <br><center><a href="{% url 'wguest:HomePage' %}">Home</a></center>
+</body>
+</html>
